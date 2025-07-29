@@ -1,0 +1,149 @@
+@page {
+	margin: 1cm 2cm;
+}
+
+.screen-reader-text {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+
+.invoice-header {
+	width: 100%;
+	margin-bottom: 30px;
+	table-layout: fixed;
+}
+
+.invoice-header td.header {
+	text-align: left;
+	width: 50%;
+}
+
+.invoice-header td.invoice-data {
+	text-align: right;
+	width: 50%;
+}
+
+.invoice-header td.invoice-data table td {
+	text-align: right;
+}
+
+h3.invoice {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.invoice-header td.invoice-data table {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.invoice-header td.invoice-data table th {
+	font-weight: normal;
+	padding-right: 10px;
+	text-align: right;
+}
+
+
+h4.address-title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.order-data-addresses td.address {
+	font-size: 14px;
+	line-height: 2;
+}
+
+td.shop-details {
+	text-align: right;
+	line-height: 2;
+	font-size: 14px;
+}
+
+.order-data-addresses {
+	width: 100%;
+	line-height: inherit;
+	text-align: left;
+	vertical-align: top;
+}
+
+.products-table {
+	border: 0;
+}
+
+.products-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 30px;
+	font-size: 14px;
+}
+
+.products-table th,
+.products-table td {
+	padding: 8px;
+}
+
+.products-table td {
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+.products-table td img.product-image {
+	width: 50px;
+}
+
+.products-table th {
+	color: #fff;
+}
+
+.products-table thead tr.product-header {
+	background-color: #323232;
+	text-align: left;
+}
+
+.order-totals {
+	margin-left: auto;
+}
+
+.order-totals td {
+	border-bottom: none;
+	text-align: right;
+}
+
+.order-info th {
+	text-align: left;
+}
+
+.order-info {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.notes {
+	margin: 20px 0;
+}
+
+.notes h4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.notes p {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+footer,
+#footer {
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	right: 0;
+	border-top: 2px solid #eee;
+	padding-top: 10px;
+}
