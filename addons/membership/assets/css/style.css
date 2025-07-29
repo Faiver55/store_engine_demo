@@ -1,0 +1,91 @@
+#wpadminbar li.storeengine-membership-plans.current {
+	background: #4d5357;
+}
+
+#wpadminbar li.storeengine-membership-plans img {
+	width: 20px;
+}
+
+.storeengine-membership-pricing form {
+	margin: 0;
+}
+
+.storeengine-membership-pricing .storeengine-card {
+	margin-bottom: 30px;
+	border: 1px solid #DDDEDF;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-header > h3 {
+	font-size: 20px;
+	font-weight: 500;
+	color: #101828;
+	margin: 0 0 20px;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-price {
+	font-size: 40px;
+	font-weight: 600;
+	color: #101828;
+}
+
+.storeengine-membership-pricing .storeengine-card ins {
+	text-decoration: none;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body {
+	display: grid;
+	gap: 20px;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-pricing {
+	display: flex;
+	align-items: end;
+	flex-wrap: wrap;
+}
+
+.storeengine-membership-pricing .storeengine-card del {
+	order: 3;
+	width: 100%;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features {
+	display: grid;
+	gap: 16px;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature {
+	display: flex;
+	gap: 8px;
+	align-items: start;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon {
+	font-size: 20px;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon--filled-checkmark,
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon--stoke-checkmark,
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon--check,
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon--add {
+	color: #00AD6B;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon--close,
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon--minus,
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-icon--stoke-close {
+	color: #FF4D4D;
+}
+
+.storeengine-membership-pricing .storeengine-card .storeengine-card-body .storeengine-card-features > .storeengine-card-feature > .storeengine-feature-label {
+	font-size: 14px;
+	font-weight: 400;
+	color: #101828;
+}
+
+.storeengine-membership-pricing .storeengine-card del > .storeengine-price {
+	font-size: 18px;
+	font-weight: 400;
+	color: #515A62;
+}
