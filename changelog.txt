@@ -1,0 +1,306 @@
+== Changelog ==
+
+= 1.3.1 - 14/07/2025 =
+- Fixed: Fatal error upon order created from admin dashboard.
+- Improved: Update lookup table after add/remove order item from admin dashboard.
+- Fixed: Error creating orders table due to table index length limitation.
+- Improved: Added index in orders meta table for performance.
+- Improved: Added support for shortcode preview (dummy data) for `aBlocks`.
+
+= 1.3.0 - 13/07/2025 =
+- Added: Migration addon added (WooCommerce to StoreEngine data migration)
+- Added: Order invoice pdf addon.
+- Added: Product add-to-cart shortcode `[storeengine_add_to_cart]`.
+- Added: WebHook event listener for admin order create event.
+- Added: WebHook event for restored order.
+- Improved: Update order webhook payload handling fatal error fallback.
+- Improved: Trash & restore order, trash order is no longer editable until restored.
+- Improved: Sanitized WebHook delivery url properly before save.
+- Improved: Log functionality added in WebHook for debugging.
+- Improved: Attribute slug validation & sanitization updated, shorten attribute taxonomy prefix.
+- Fixed: Remove usage of deprecated/removed order method from webhook and email class.
+- Fixed: Order delete webhook was triggering fatal error.
+- Fixed: Remove usage of deprecated/removed order method from webhook and email class.
+- Fixed: Order delete WebHook was triggering fatal error.
+- Fixed: Refresh order list table on restore order.
+- Fixed: Variation status update rest api user permission fixed.
+- Fixed: Attribute order by.
+- Fixed: Attribute taxonomy slug max length error fixed.
+- Fixed: Attributes list table pagination was not working.
+- Fixed: Attributes list table search & per-page reset.
+- Fixed: Products shipping option ui issue.
+- Fixed: Add-to-cart was not working from membership protected content page.
+- Fixed: Membership protected content page broken layout.
+- Fixed: Typo & textdomain fixed.
+
+= 1.2.2 - 03/07/2025 =
+- Added: Admin notice feature that renders both in react and native admin notice.
+- Added: Catalog mode feature added via addons interface.
+- Improved: Optimize settings update handler (handler), with support for addon settings.
+- Improved: Added new hooks for pricing template, product quantity-input and add-to-cart buttons.
+- Improved: Made FloatingCart class a singleton, adding ability to use remove_action() on actions added from it.
+- Improved: Customer's total spent calculation (total purchase minus order refund).
+- Improved: Frontend user dashboard UI updated.
+- Improved: Tax general settings Rounding option UI updated.
+- Fixed: Settings save (submit) button glitch.
+- Fixed: Tax tab glitch (on reload).
+- Fixed: Request handler data sanitization fixed, added support for string[] data.
+- Fixed: Customer data (api response) empty when contains trashed orders.
+- Fixed: Commission order id ajax response removing trashed orders.
+- Fixed: Order cancellation logic fixed for COD payment.
+- Fixed: Access Group list table column data.
+
+= 1.2.1 - 24/06/2025 =
+- Added: FSE theme product archive sidebar settings not worked issue.
+- Added: Frontend Dashboard redirect setting.
+- Fixed: Attribute Create modal close issue.
+- Fixed: Allow from empty form field to pass-through sanitizer and populate sanitize payload, allowing saving empty field and zero (0) value.
+- Fixed: Subscription Price details not showing issue.
+- Fixed: Subscription Editor Status update not working.
+- Fixed: Admin List Table UI issue.
+- Fixed: Academy Course Purchase UI issue.
+- Fixed: Membership addon payment issue.
+- Fixed: Subscription based price issue.
+
+= 1.2.0 - 19/06/2025 =
+- Update: Revamped Academy LMS & StoreEngine Membership addon Integration
+- Fixed: Cart crashing with invalid price id price deleted after user added item in their cart.
+- Fixed: Order editor coupon add/remove bug, duplicating coupon item if coupon contains uppercase characters.
+- Fixed: Updated static link for registration & password reset.
+- Fixed: Dashboard login form responsive issue.
+- Fixed: Rest API permission for other admin users.
+- Fixed: Added default coupon discount (10%) for creating new coupon.
+- Fixed: PayPal api error when order total is greater than or equal to 1000.
+- Fixed: PayPal zero decimal currency order total amount formatting.
+- Fixed: Set cart hash cookie only when necessary (adding product to cart), improving server side caching and page loading performance.
+- Improved: Academy LMS integration new UI.
+- Added: API permalink helper function handling pretty & plain permalink.
+- Fixed: API Permalink issues across react reducer & actions.
+- Fixed: Frontend dashboard order query fixed, causing dashboard to crash if there any trashed Order for the logged-in user.
+- Fixed: Stripe payment bug.
+- Improved: Stripe payment gateway class error handling.
+- Improved: Product review & comment error response.
+- Fixed: Subscription list table navigation.
+
+= 1.1.1 - 05/06/2025 =
+* Added: Access Group Buy button inject.
+* Improvement: Product Integration Logic.
+* Improvement: Product Integration Subscription price disable for Academy LMS Course Bundle and Booking.
+* Improvement: Membership Shortcode UI Improved.
+* Fixed: Academy Course Bundle Integration.
+* Fixed: Single Price add to cart not working.
+
+= 1.1.0 - 04/06/2025 =
+* Improvement: Product price UI improved with support for subscription information.
+* Fixed: Console error for faulty proptypes fixed.
+* Fixed: Price ajax action.
+* Improvement: Price output for subscription (show fee).
+* Added: Added support for trial subscription through Stripe addon.
+* Fixed: Add saved payment php error.
+* Fixed: Subscription status update (activation).
+* Improvement: Update stripe payment validation.
+* Fixed: Update Stripe addon error messages.
+* Improvement: Cache get_page_by_title query.
+* Fixed: Rating `0.5` css class.
+* Fixed: Subscription date calculation fixed.
+* Fixed: Backward compatibility for old duration type (plural forms) & setup-fee type.
+* Fixed: Subscription scheduler (renewal-payment) fixed.
+* Added: Stripe addon hook for renewal order auto payment.
+* Fixed: Check if header is sent before setting cookie.
+* Fixed: Order version property fixed.
+* Improvement: Remove setting version from existing subscription to renewal orders.
+* Fixed: Subscription list output sort by id.
+* Fixed: Entity object read-meta-data read-flag was not setting properly for Order object.
+* Fixed: Order status pending in frontend-dashboard.
+* Fixed: Subscription status update on order marked as paid recursively fixed.
+* Improvement: Convert Order note date time zone to current users local time zone.
+* Improvement: Remove order notes for related order (subscription api).
+* Improvement: Update cart table layout.
+* Fixed: Disallow subscription (cart item) qty update (not supported).
+* Improvement: Allow disabling qty input field.
+* Improvement: Allow 3rd party plugin/theme to filter cart item quantity form args.
+* Fixed: Category editor bug while creating new category fixed.
+* Fixed: Order detail date formatting updated.
+* Fixed: Customer details Order Status UI fixed.
+* Improvement: Improved membership (access-group) with subscription status transition.
+* Improvement: Improved email template/settings editor state handling.
+* Fixed: Show correct refund amount in email notification.
+* Improvement: Refactor css for faster rendering.
+* Improvement: Improved product filter widgets (archive sidebar widgets).
+* Fixed: Attribute search, navigation, page blank and delete issue fixed.
+* Fixed: WebHook list-table fixed.
+* Fixed: Commission and payout created date issue fixed.
+* Improvement: Allow 3rd party plugin to hook into integration runner instance.
+* Improvement: Added subscription data in admin customer details page.
+* Fixed: Product editor gallery button UI fixed.
+* Fixed: Dashboard (analytics) total sales, total refund & gross sales fixed.
+* Improvement: Updated placeholder image alt attribute.
+* Improvement: Update top product list, include total net revenue.
+* Fixed: Top product featured image.
+* Improvement: Update top customer list, include customer avatar.
+* Fixed: Top customer total spent value type.
+* Fixed: Full refund invalid amount fixed.
+* Improvement: Subscription table UI update.
+* Fixed: Admin dashboard orders pagination.
+* Fixed: Admin dashboard payments pagination.
+* Fixed: Frontend dashboard order pagination.
+* Fixed: Payment `can-refund` logic.
+* Fixed: Frontend order list table status ui.
+* Improvement: Convert time output to user's timezone.
+* Fixed: Create Order page brake due to order by query error.
+* Fixed: apply coupon undefined index error.
+* Fixed: Checkout page `Email me with news and offers` checkbox spacing fixed.
+* Fixed: Product sorting settings typo fixed.
+* Improvement: Cart page UI revamped & improved.
+* Improvement: Hide subscription price items from add item modal.
+* Fixed: Fixed physical (subscription) product add to cart error (partially supported).
+* Added: Display price on course-bundle page.
+* Improvement: Remove course-bundle access when order status is unpaid.
+
+= 1.0.2 - 28/05/2025 =
+* Added: Subscription support for Academy LMS Course Purchase
+* Fixed: Membership Access group issue
+
+= 1.0.1 - 26/05/2025 =
+* Fixed: Digital Product Auto Complete not worked issue
+* Fixed: Admin Create Order Not worked issue
+* Fixed: Membership access group table data formatting issue
+
+= 1.0.0 - 21/05/2025 =
+* Update: Revamped Admin Settings UI & Improve lot of features
+* Fixed: Lots of bugs fixing
+
+= 1.0.0-beta-6.2 - 16/05/2025 =
+* Fixed: Academy LMS Course Bundle Integration issue
+* Fixed: Cart item backward compatibility issue.
+
+= 1.0.0-beta-6.1 - 15/05/2025 =
+* Fixed: Fixed class not found (case-sensitive file name) on linux server.
+
+= 1.0.0-beta-6 - 15/05/2025 =
+* Added: Shipping feature
+* Added: Subscription feature.
+* Added: Saved payment method (card via Stripe addon).
+* Added: Admin now can trash & permanently delete orders.
+* Fixed: Cart meta data was not loading.
+* Improvement: Added custom fee handler inside cart class for improving subscription setup fee calculation.
+* Improvement: Cart metadata handling improved.
+* Improvement: Price data handling.
+* Improvement: Improved admin order api for better error handling.
+* Improvement: Membership pricing table UI improved.
+* Improvement: Added order payment status separately.
+* Improvement: Added payment information (method icon, transaction-id, payment date time, etc.).
+* Fixed: Shortcode output empty p tags (`<p></p>`) and extra br tags (`<br>`).
+* Fixed: Direct checkout was not working on safari browser.
+* Improvement: Orders can be now trashed & deleted.
+* Fixed: Course enroll via integration hook.
+* Fixed: Course enroll widget price selection UI.
+* Fixed: Affiliate settings UI.
+* Fixed: Affiliate commission update after checkout & payment status.
+
+= 1.0.0-beta-5.1 - 28/04/2025 =
+* Fixed: Error while migrating from older beta version fixed.
+* Fixed: Fatal error from dashboard shortcode.
+* Fixed: Dashboard content blank issue on non-fse theme.
+
+= 1.0.0-beta-5 - 24/04/2025 =
+* Improvement: Revamped Checkout JavaScript
+* Added: `storeengine_apply_coupon_form` shortcode
+* Added: `storeengine_cart_list_table` shortcode
+* Added: `storeengine_checkout_form` shortcode
+* Added: `storeengine_continue_shopping` shortcode
+* Added: `storeengine_billing_address` shortcode
+* Added: `storeengine_order_details` shortcode
+* Added: `storeengine_order_downloads` shortcode
+* Added: `storeengine_order_summary` shortcode
+* Added: `storeengine_proceed-to-checkout` shortcode
+* Added: `storeengine_payment_instruction` shortcode
+* Fixed: Membership pricing page, added dynamic feature listing on pricing table.
+* Fixed: Order editor customer select problem.
+* Fixed: Order line item (product) title overflow.
+* Fixed: Order list table customer details.
+* Fixed: Fix notice during blank form submission.
+* Fixed: Fix Affiliate registration form styles broken.
+* Fixed: Fix textdomain notice issue.
+* Fixed: Removed unused css & js.
+* Improvement: Added support for Affiliate registration plugins tools (regenerate page, select different page, etc).
+* Fixed: Frontend Dashboard affiliate page 404 bug.
+* Fixed: Affiliate registration page creation failed during addon activation.
+* Improvement: Improved Affiliate registration page form handling.
+* Updated: `storeengine_products` shortcode
+* Updated: StoreEngine cart page
+* Updated: StoreEngine checkout page
+* Updated: StoreEngine thankyou page
+* Removed: `storeengine_cart` shortcode
+* Removed: `storeengine_checkout` shortcode
+* Removed: `storeengine_thankyou` shortcode
+
+= 1.0.0-beta-4.5 - 22/04/2025 =
+* Fixed: Taxonomy terms archive template getting override by StoreEngine product archive template.
+* Improvement: Added current theme info (WordPress Tab), OS info (Server Tab) in `Tools » Status` page.
+
+= 1.0.0-beta-4 - 17/04/2025 =
+* Improvement: Using `Redux Toolkit` to improve admin dashboard performance and workflow.
+* Added: Integration with Academy LMS Tutor Booking.
+* Added: Integration with Academy LMS Course Bundle.
+* Fixed: Remove coupon from cart automatically when it’s in the trash or already been deleted.
+* Fixed: Reset cart cookie after logout.
+* Fixed: Membership pricing page 500 server side error.
+* Fixed: Hide membership pricing if product is not published.
+* Fixed: Delete product prices & integration from database after admin deletes a product.
+* Fixed: Console error in admin order edit screen fixed.
+* Improvement: Update translators comments & rebuild translation template (pot) file.
+* Fixed: Integration errors aren't showing properly in product edit page.
+* Fixed: translations loading too early.
+* Fixed: Frontend ajax response nonce error notification.
+
+= 1.0.0-beta-3 - 13/04/2025 =
+* Fixed: Stripe sdk not loading before checkout script.
+* Fixed: Internal payment API `401 unauthenticated` error.
+* Fixed: Replaced static db prefixes with `$wpdb->prefix`.
+* Fixed: Remove unique (complex) constraints from order & order item meta tables.
+* Improvement: Added table index with `meta_key` (order & order item meta tables) for performance.
+* Fixed: Membership admin-dashboard search input.
+* Fixed: Membership editor blank after reload.
+* Improvement: Removed unused codes.
+
+= 1.0.0-beta-2 - 09/04/2025 =
+
+* Improvement: Added order placed date (as metadata), separate from order created date.
+* Improvement: Permalink settings added for customizing product permalink structure.
+* Fixed: Order status while user purchase as guest.
+* Fixed: Order created in update query.
+* Fixed: Order date on thank-you page.
+* Fixed: Admin product editor ui.
+* Fixed: Deprecation error on product archive page if `max_page_num` is 1
+* Fixed: Typo in admin dashboard
+* Fixed: Textdomain mismatched.
+* Fixed: Invalid order date in admin dashboard.
+* Fixed: Fatal error on single product page if both WooCommerce & StoreEngine is active sametime.
+* Fixed: Tax settings page in admin dashboard.
+* Fixed: Mics. spacing & text color fixed.
+
+= 1.0.0-beta-1 - 07/04/2025 =
+
+* Initial Release
+  * Academy LMS native integration,
+  * Multi price model for product,
+  * Multiple payment method:
+    * PayPal,
+    * Stripe,
+    * Cash On Delivery,
+    * Direct Bank Transfer,
+    * Check Payment, etc.
+  * Payment listing,
+  * Full/Partial refunds,
+  * Email Notification,
+  * Tax,
+  * Coupon,
+  * Simple & Variable product,
+  * Downloadable product,
+  * Image gallery for product,
+  * Variable product price adjustments,
+  * Affiliate,
+  * Membership,
+  * Webhook,
+  * ShortCodes, etc.
