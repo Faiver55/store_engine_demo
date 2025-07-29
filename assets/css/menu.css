@@ -1,0 +1,36 @@
+/* admin-menu.css */
+#adminmenu li.toplevel_page_storeengine a.toplevel_page_storeengine > .wp-menu-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#adminmenu li.toplevel_page_storeengine a.toplevel_page_storeengine > .wp-menu-image img {
+    max-width: 20px;
+    height: auto;
+    padding: 0 !important;
+}
+#adminmenu li.toplevel_page_storeengine ul li a,
+#adminmenu li.toplevel_page_storeengine .wp-submenu > li > a {
+	/*display: flex;*/
+	/*align-items: center;*/
+    padding: 7px 12px;
+}
+
+#adminmenu li.toplevel_page_storeengine ul.wp-submenu li {
+    clear: both;
+}
+#adminmenu li.toplevel_page_storeengine ul.wp-submenu li a[href*="admin.php?page=storeengine-addons"],
+#adminmenu li.toplevel_page_storeengine ul.wp-submenu li a[href^="admin.php?page=storeengine-addons"] {
+    color: #FDB022;
+}
+#adminmenu li.toplevel_page_storeengine ul.wp-submenu li.wp-first-item a[href^="admin.php?page=storeengine"]:after,
+#adminmenu li.toplevel_page_storeengine ul.wp-submenu li.wp-first-item a[href*="admin.php?page=storeengine"]:after,
+#adminmenu li.toplevel_page_storeengine ul.wp-submenu li a[href*="admin.php?page=storeengine-tools"]:after,
+#adminmenu li.toplevel_page_storeengine ul.wp-submenu li a[href^="admin.php?page=storeengine-tools"]:after {
+    border-bottom: 1px solid hsla(0,0%,100%,.2) !important;
+    display: block !important;
+    float: left;
+    margin: 15px -15px 7px;
+    content: "";
+    width: calc(100% + 26px) !important;
+}

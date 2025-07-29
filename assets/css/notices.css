@@ -1,0 +1,197 @@
+/**
+ * Admin Notices.
+ */
+
+:root {
+	--storeengine-primary-font: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	/*--storeengine-secondary-font: 'Inter', sans-serif;*/
+	--storeengine-primary-color: #008DFF;
+	--storeengine-secondary-color: #FF5000;
+	--storeengine-text-color: #101828;
+	--storeengine-placeholder-color: #8E949A;
+	--storeengine-border-color: #DDDEDF;
+	--storeengine-gray-color: #646C73;
+	--storeengine-background-color: #FAFAFA;
+	--storeengine-green-color: #00AD6B;
+	--storeengine-warning-color: #FDB022;
+	--storeengine-error-color: #FF4D4D;
+	--storeengine-white-color: #ffffff;
+	--storeengine-violet-color: #9A6EFF;
+}
+
+.storeengine-notice, .storeengine-notice * {
+	font-family: var(--storeengine-primary-font) sans-serif;
+}
+
+.storeengine-notice {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid var(--storeengine-border-color);
+}
+
+.storeengine-notice:first-child {
+	border-top: 0;
+}
+
+.storeengine-notice .storeengine-notice__wrapper {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	margin: 0;
+	padding: 16px 24px;
+}
+
+.storeengine-notice.notice-large {
+	padding: 0;
+}
+
+.storeengine-notice.notice-large .storeengine-notice__wrapper {
+	padding: 20px;
+}
+
+.storeengine-notice__icon {
+	position: relative;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--storeengine-primary-color);
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.storeengine-notice__icon .storeengine-icon {
+	font-size: 20px;
+}
+
+.storeengine-notice__icon .storeengine-icon::before {
+	color: #fff;
+}
+
+.storeengine-notice__icon span {
+	display: inline;
+	font-size: 50px;
+	color: var(--storeengine-primary-color);
+}
+
+.storeengine-notice__content p {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #353C41;
+	margin: 0;
+	padding: 0;
+}
+
+.storeengine-notice__content p:not(:first-child) {
+	margin-top: 0.5em;
+}
+
+.storeengine-notice__control {
+}
+
+.storeengine-notice__control .storeengine-btn {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 17px;
+	padding: 12px 35px;
+}
+
+.storeengine-notice.notice-info {
+	border-left-color: var(--storeengine-primary-color);
+}
+
+.storeengine-notice.notice-info .storeengine-notice__icon {
+	background: var(--storeengine-primary-color);
+}
+
+.storeengine-notice.notice-success {
+	border-left-color: var(--storeengine-green-color);
+}
+
+.storeengine-notice.notice-success .storeengine-notice__icon {
+	background: var(--storeengine-green-color);
+}
+
+.storeengine-notice.notice-warning {
+	border-left-color: var(--storeengine-warning-color);
+}
+
+.storeengine-notice.notice-warning .storeengine-notice__icon {
+	background: var(--storeengine-warning-color);
+}
+
+.storeengine-notice.notice-error {
+	border-left-color: var(--storeengine-error-color);
+}
+
+.storeengine-notice.notice-error .storeengine-notice__icon {
+	background: var(--storeengine-error-color);
+}
+
+/**
+ * Button
+ */
+.storeengine-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+	text-decoration: none;
+	background: #fff;
+	color: #444;
+	cursor: pointer;
+	text-align: center;
+	padding: 15px;
+	height: auto;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	overflow: hidden !important;
+	transition: all 0.3s ease;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+
+.storeengine-btn::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: -100%;
+	top: 0;
+	background: rgba(0, 0, 0, 0.1);
+	transition: all 0.25s cubic-bezier(0.66, 0.36, 0.17, 0.91);
+}
+
+.storeengine-btn:hover::after {
+	left: 0;
+}
+
+.storeengine-btn:hover, .storeengine-btn:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+.storeengine-btn--preset-blue {
+	background: var(--storeengine-primary-color);
+	color: #fff !important;
+}
+
+.storeengine-btn--md {
+	padding: 10px 16px;
+	font-size: 14px;
+}
+
+/**
+ * Handle special cases.
+ */
+.storeengine-notice.options-permalink-php .storeengine-notice__control .storeengine-btn {
+	display: none;
+}
